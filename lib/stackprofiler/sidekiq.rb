@@ -12,7 +12,7 @@ module Stackprofiler
       def call worker, job, queue, &blk
         opts = {mode: :wall, raw: true, threads: [Thread.current] }.merge @options
 
-        if @predicate.call worker, job, queue
+        if @predicate.call(worker, job, queue) && !StackProfx.running?
           profile = StackProfx.run(opts) { blk.call }
 
           klass, jid = job.values_at 'class', 'jid'
