@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = 'stackprofiler-sidekiq'
-  spec.version       = '0.0.1'
+  spec.version       = '0.0.2'
   spec.authors       = ['Aidan Steele']
   spec.email         = ['aidan.steele@glassechidna.com.au']
   spec.summary       = %q{Sidekiq middleware for low-overhead profiling of background jobs.}
