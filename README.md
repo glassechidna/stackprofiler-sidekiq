@@ -55,6 +55,12 @@ object that receives the same arguments as Sidekiq middleware - see the above
 link to determine what these are. Returning a truthy value will have the job
 profiled, otherwise it is ignored.
 
+## Limitations
+
+Due to limitations in Stackprofx, right now [only one job at a time][5] can
+be profiled. This isn't necessarily as bad as it sounds, but a fix is being
+worked on.
+
 ## Contributing
 
 1. Fork it ( https://github.com/glassechidna/stackprofiler-sidekiq/fork )
@@ -67,3 +73,4 @@ profiled, otherwise it is ignored.
 [2]: https://github.com/mperham/sidekiq
 [3]: https://github.com/tmm1/stackprof
 [4]: https://github.com/mperham/sidekiq/wiki/Middleware
+[5]: https://github.com/glassechidna/stackprofiler-sidekiq/issues/1
