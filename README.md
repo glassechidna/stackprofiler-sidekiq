@@ -7,10 +7,6 @@ This is a [Sidekiq][2] middleware that makes benchmarking of Sidekiq apps a bree
 It utilises a fork of the the brilliant [`stackprof`][3] to enable low-overhead
 sampling of Ruby processes.
 
-[1]: https://github.com/glassechidna/stackprofiler
-[2]: https://github.com/mperham/sidekiq
-[3]: https://github.com/tmm1/stackprof
-
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -29,7 +25,7 @@ Or install it yourself as:
 
 ## Usage
 
-[Sidekiq middleware][1] are helpers that can be included in your background jobs.
+[Sidekiq middleware][4] are helpers that can be included in your background jobs.
 The Stackprofiler middleware is `Stackprofiler::Sidekiq::Middleware`. It can be
 configured like this:
 
@@ -59,8 +55,6 @@ object that receives the same arguments as Sidekiq middleware - see the above
 link to determine what these are. Returning a truthy value will have the job
 profiled, otherwise it is ignored.
 
-[1]: https://github.com/mperham/sidekiq/wiki/Middleware
-
 ## Contributing
 
 1. Fork it ( https://github.com/glassechidna/stackprofiler-sidekiq/fork )
@@ -68,3 +62,8 @@ profiled, otherwise it is ignored.
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
+
+[1]: https://github.com/glassechidna/stackprofiler
+[2]: https://github.com/mperham/sidekiq
+[3]: https://github.com/tmm1/stackprof
+[4]: https://github.com/mperham/sidekiq/wiki/Middleware
