@@ -35,7 +35,7 @@ require 'stackprofiler/sidekiq'
 Sidekiq.configure_server do |config|
   config.server_middleware do |chain|
     chain.add Stackprofiler::Sidekiq::Middleware, {
-      ui_url: 'http://localhost:9292/receive',
+      ui_url: 'http://localhost:9260/receive',
       predicate: proc do |worker, job, queue|
         job['class'] == 'MyBackgroundJob'
       end
